@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calulations"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="496dp"
+        android:text="calculaions"
+        android:textSize="32sp"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="420dp"
+        android:text="answer"
+        android:textSize="32sp"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="1"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="457dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/supabutton5"
+        android:layout_width="105dp"
+        android:layout_height="61dp"
+        android:text="+"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="457dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton6"
+        android:layout_width="105dp"
+        android:layout_height="61dp"
+        android:text="-"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="515dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton7"
+        android:layout_width="105dp"
+        android:layout_height="61dp"
+        android:text="*"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="573dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton8"
+        android:layout_width="105dp"
+        android:layout_height="61dp"
+        android:text="/"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="628dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton3"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="del"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="631dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton4"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="CC"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="631dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton2"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="0"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="631dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="9"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="573dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="8"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="573dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="7"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="573dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="6"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="515dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="5"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="515dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="4"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="515dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="3"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="457dp"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/supabutton"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:text="2"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="457dp"
+        tools:ignore="MissingConstraints"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
