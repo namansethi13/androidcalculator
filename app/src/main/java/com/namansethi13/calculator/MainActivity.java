@@ -1,5 +1,5 @@
 package com.namansethi13.calculator;
-import java.util.*;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import org.mozilla.javascript.Context;
@@ -12,16 +12,22 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     TextView btn_one , btn_two,btn_three,btn_four,btn_five,btn_six,btn_seven,btn_eight,btn_nine,btn_zero;
     TextView btn_dot,btn_equals,btn_mod,btn_AC,btn_back,btn_divide,btn_multiply,btn_minus,btn_plus;
-    String inputData;
     TextView inputText;
+    boolean operator = true;
     public Object calculate(String expression) {
+        try {
+
 
         Context context = Context.enter(); //
         context.setOptimizationLevel(-1); // this is required[2]
         Scriptable scope = context.initStandardObjects();
-        Object result = context.evaluateString(scope, expression, "<cmd>", 1, null);
-        return result;
+        return context.evaluateString(scope, expression, "<cmd>", 1, null);
+
         }
+    catch (Exception e){
+        return "";
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,94 +59,111 @@ public class MainActivity extends AppCompatActivity {
         btn_zero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"0");
+                if(operator) {
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                    inputText.setText(Data + "0");
+                }
             }
         });
         btn_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"1");
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                    inputText.setText(Data + "1");
             }
         });
         btn_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"2");
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                inputText.setText(Data + "2");
+
             }
         });
         btn_three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"3");
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                    inputText.setText(Data + "3");
             }
         });
         btn_four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"4");
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                    inputText.setText(Data + "4");
             }
         });btn_five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"5");
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                    inputText.setText(Data + "5");
             }
         });btn_six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Data = inputText.getText().toString();
-                inputText.setText(Data+"6");
+                    operator = false;
+                    String Data = inputText.getText().toString();
+                    inputText.setText(Data + "6");
             }
         });
         btn_seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                operator = false;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"7");
-            }
+                inputText.setText(Data+"7");}
         });
         btn_eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                operator = false;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"8");
-            }
+                inputText.setText(Data+"8");}
         });
         btn_nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                operator = false;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"9");
-            }
+                inputText.setText(Data+"9");}
         });
         btn_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!operator) {
+                operator = true;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"+");
+                inputText.setText(Data+"+");}
             }
         });btn_multiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!operator) {
+                operator = true;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"*");
+                inputText.setText(Data+"*");}
             }
         });
         btn_divide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!operator) {
+                operator = true;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"/");
+                inputText.setText(Data+"/");}
             }
         });
         btn_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                operator = true;
                 String Data = inputText.getText().toString();
                 inputText.setText(Data+"-");
             }
@@ -148,20 +171,25 @@ public class MainActivity extends AppCompatActivity {
         btn_mod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!operator) {
+                operator = true;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+"%");
+                inputText.setText(Data+"%");}
             }
         });
         btn_dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(operator) {
+                operator = false;
                 String Data = inputText.getText().toString();
-                inputText.setText(Data+".");
+                inputText.setText(Data+".");}
             }
         });
         btn_AC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                operator = false;
                 String Data = inputText.getText().toString();
                 inputText.setText("");
             }
@@ -174,9 +202,25 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     int len = Data.length()-1;
                     inputText.setText(sb.deleteCharAt(len));
+
                 }
                 catch (Exception e){
 
+                }
+                finally {
+                    try {
+
+
+                    if(Character.isDigit(inputText.getText().toString().charAt(inputText.length()-1))){
+                        operator = false;
+                    }
+                    else{
+                        operator = true;
+                    }
+                }
+                    catch (Exception e){
+
+                    }
                 }
 
             }
@@ -190,14 +234,21 @@ public class MainActivity extends AppCompatActivity {
 
                     Object ans = calculate(inputText.getText().toString());
                     int len = ans.toString().length();
-                    if (ans.toString().charAt(len - 1) == '0') {
-                        String Data = ans.toString();
-                        StringBuffer sb = new StringBuffer(Data);
-                        sb.deleteCharAt(len - 1);
-                        inputText.setText(sb.deleteCharAt(len - 2));
-                    } else {
-                        inputText.setText(ans.toString());
+
+                        try {
+                            if (ans.toString().charAt(len - 1) == '0') {
+                                String Data = ans.toString();
+                                StringBuffer sb = new StringBuffer(Data);
+                                sb.deleteCharAt(len - 1);
+                                inputText.setText(sb.deleteCharAt(len - 2));
+                            } else {
+                                inputText.setText(ans.toString());
+                            }
+                        }
+                        catch (Exception e){
+                            inputText.setText("NAN");
                     }
+
                 }
             }
         });
