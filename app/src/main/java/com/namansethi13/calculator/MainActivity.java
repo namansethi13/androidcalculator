@@ -59,11 +59,9 @@ public class MainActivity extends AppCompatActivity {
         btn_zero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(operator) {
                     operator = false;
                     String Data = inputText.getText().toString();
                     inputText.setText(Data + "0");
-                }
             }
         });
         btn_one.setOnClickListener(new View.OnClickListener() {
@@ -180,11 +178,9 @@ public class MainActivity extends AppCompatActivity {
         btn_dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(operator) {
                 operator = false;
                 String Data = inputText.getText().toString();
                 inputText.setText(Data+".");}
-            }
         });
         btn_AC.setOnClickListener(new View.OnClickListener() {
             @Override
