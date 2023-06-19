@@ -18,5 +18,6 @@ org.mozilla.javascript.Scriptable;
 
 
 
-![WhatsApp Image 2023-06-19 at 8 26 59 PM](https://github.com/namansethi13/androidcalculator/assets/93597591/b775ea22-c8ab-4cf4-a191-a3a28887b134)
-![WhatsApp Image 2023-06-19 at 8 26 58 PM](https://github.com/namansethi13/androidcalculator/assets/93597591/523af436-e918-4059-b88e-ed74a42ec034)
+ <img src="https://github.com/namansethi13/androidcalculator/assets/93597591/b775ea22-c8ab-4cf4-a191-a3a28887b134" width="300">
+ <img src="https://github.com/namansethi13/androidcalculator/assets/93597591/523af436-e918-4059-b88e-ed74a42ec034" width="300">
+
